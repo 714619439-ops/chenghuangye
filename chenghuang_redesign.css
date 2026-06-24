@@ -1,0 +1,340 @@
+/* ===== 城隍法脉 · 全新封面设计 v3.0 ===== */
+/* 传统庙宇风格 · 庄重典雅 · 金色暖调 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&display=swap');
+
+:root {
+  --bg-deep: #050302;
+  --bg-main: #0A0604;
+  --bg-card: rgba(255, 248, 240, 0.03);
+  --bg-card-hover: rgba(255, 248, 240, 0.06);
+  --bg-gold-light: rgba(255, 200, 80, 0.06);
+  --text-primary: #FFF5E6;
+  --text-secondary: #E8D5B8;
+  --text-muted: #A09080;
+  --gold: #FFC850;
+  --gold-light: #FFE090;
+  --gold-dark: #E0A830;
+  --gold-glow: rgba(255, 200, 80, 0.35);
+  --red: #CC3333;
+  --red-dark: #8B1A1A;
+  --border: rgba(255, 200, 80, 0.10);
+  --border-gold: rgba(255, 200, 80, 0.30);
+  --shadow: rgba(0, 0, 0, 0.6);
+  --shadow-gold: rgba(255, 200, 80, 0.08);
+  --font-serif: 'Noto Serif SC', 'Source Han Serif SC', 'STSong', serif;
+  --font-sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-hand: 'Ma Shan Zheng', 'KaiTi', 'STKaiti', cursive;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  background: var(--bg-deep);
+  line-height: 1.8;
+  min-height: 100vh;
+  background-image:
+    radial-gradient(ellipse at 20% 15%, rgba(139, 26, 26, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 85%, rgba(255, 200, 80, 0.04) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* ===== 导航栏 ===== */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg-main);
+  border-bottom: 1px solid var(--border);
+  padding: 0 var(--space-md);
+}
+
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+
+.nav-brand {
+  font-family: var(--font-hand);
+  font-size: 1.5rem; color: var(--text-primary);
+  text-decoration: none; letter-spacing: 6px;
+  text-shadow: 0 0 20px var(--gold-glow);
+}
+.nav-brand span { color: var(--gold); }
+
+.nav-links { display: flex; gap: 0.15rem; list-style: none; }
+.nav-links a {
+  font-family: var(--font-sans); font-size: 0.82rem;
+  color: var(--text-secondary); text-decoration: none;
+  padding: 0.4rem 0.9rem; border-radius: 8px;
+  transition: all 0.3s; letter-spacing: 1px;
+}
+.nav-links a:hover { color: var(--gold-light); background: var(--bg-gold-light); }
+.nav-links a.active {
+  color: var(--gold); background: var(--bg-gold-light);
+  border: 1px solid var(--border);
+}
+
+.nav-toggle { display: none; background: none; border: 1px solid var(--border); border-radius: 8px; font-size: 1.3rem; color: var(--gold); cursor: pointer; padding: 0.3rem 0.6rem; }
+
+@media (max-width: 900px) {
+  .nav-toggle { display: block; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg-main); border-bottom: 1px solid var(--border); flex-direction: column; padding: var(--space-sm); }
+  .nav-links.open { display: flex; }
+}
+
+/* ===== 容器 ===== */
+.container { max-width: 1000px; margin: 0 auto; padding: var(--space-lg) var(--space-md); }
+
+/* ===== ★★★ 封面横幅（重点设计）★★★ ===== */
+.banner-dharma {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(139, 26, 26, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(255, 200, 80, 0.06) 0%, transparent 50%),
+    var(--bg-main);
+  border: 1px solid var(--border);
+}
+
+/* 装饰性顶部花纹 */
+.banner-dharma::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--red), var(--gold), transparent);
+  opacity: 0.6;
+}
+
+/* 角落装饰 */
+.banner-dharma .corner-deco {
+  position: absolute;
+  font-size: 1.2rem;
+  color: var(--gold);
+  opacity: 0.12;
+  font-family: var(--font-serif);
+}
+.banner-dharma .corner-deco.tl { top: 15px; left: 20px; }
+.banner-dharma .corner-deco.tr { top: 15px; right: 20px; }
+.banner-dharma .corner-deco.bl { bottom: 15px; left: 20px; }
+.banner-dharma .corner-deco.br { bottom: 15px; right: 20px; }
+
+/* "城隍法脉·二十一司护法系统" 副标题 */
+.banner-dharma p:first-child {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 4px;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+.banner-dharma p:first-child::before,
+.banner-dharma p:first-child::after {
+  content: '◆';
+  font-size: 0.5rem;
+  color: var(--gold);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.banner-dharma p:first-child::before { left: -5px; }
+.banner-dharma p:first-child::after { right: -5px; }
+
+/* 核心誓言 - "阳间三世 积善是宝" */
+.banner-dharma .oath {
+  font-family: var(--font-hand);
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: 14px;
+  line-height: 1.5;
+  color: var(--gold-light);
+  text-shadow:
+    0 0 40px var(--gold-glow),
+    0 0 80px var(--gold-glow),
+    0 2px 4px rgba(0,0,0,0.5);
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 3rem;
+}
+
+/* 誓言左右的金色竖线装饰 */
+.banner-dharma .oath::before,
+.banner-dharma .oath::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  opacity: 0.4;
+}
+.banner-dharma .oath::before { left: 0.5rem; }
+.banner-dharma .oath::after { right: 0.5rem; }
+
+/* "阴间三善自有公平 · 请君深信因果" */
+.banner-dharma .oath-sub {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-md);
+  letter-spacing: 6px;
+  font-family: var(--font-sans);
+  position: relative;
+  display: inline-block;
+}
+
+/* 按钮区域 */
+.banner-dharma .btn-group {
+  margin-top: var(--space-lg);
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== 按钮 ===== */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #050302;
+  font-weight: 600;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px var(--gold-glow); }
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #050302;
+  font-weight: 600;
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 30px var(--gold-glow); }
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+}
+.btn-outline:hover { background: var(--bg-gold-light); border-color: var(--gold); transform: translateY(-2px); }
+
+/* ===== 卡片 ===== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px var(--shadow);
+}
+.card-gold {
+  border-color: var(--border-gold);
+  border-left: 3px solid var(--gold);
+  background: var(--bg-card);
+}
+.card-gold:hover { box-shadow: 0 8px 40px var(--shadow-gold); }
+.card-silver { border-left: 3px solid var(--text-muted); }
+
+/* ===== 网格 ===== */
+.grid { display: grid; gap: var(--space-md); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* ===== 页面标题 ===== */
+.page-header { text-align: center; padding: var(--space-xl) 0 var(--space-lg); }
+.page-header::before { content: '☸'; display: block; font-size: 1.5rem; color: var(--gold); margin-bottom: var(--space-sm); opacity: 0.4; }
+.page-header::after { content: ''; display: block; width: 60px; height: 1px; background: var(--gold); margin: var(--space-md) auto 0; opacity: 0.4; }
+.page-header h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: 6px; color: var(--text-primary); }
+.page-header p { color: var(--text-muted); max-width: 600px; margin: var(--space-sm) auto 0; font-size: 0.9rem; letter-spacing: 2px; font-family: var(--font-sans); }
+
+/* ===== 寺庙网格 ===== */
+.si-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-sm); }
+.si-card {
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: var(--space-md); text-decoration: none; color: var(--text-primary);
+  transition: all 0.3s; position: relative; overflow: hidden;
+}
+.si-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0; transition: opacity 0.3s; }
+.si-card:hover::before { opacity: 1; }
+.si-card:hover { border-color: var(--border-gold); background: var(--bg-card-hover); transform: translateY(-4px); box-shadow: 0 12px 40px var(--shadow); }
+
+/* ===== 心六宫格 ===== */
+.heart-six { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-md); }
+
+/* ===== 分隔线 ===== */
+.divider { text-align: center; padding: var(--space-lg) 0; color: var(--gold); font-size: 1rem; letter-spacing: 12px; opacity: 0.3; }
+
+/* ===== 页脚 ===== */
+footer { text-align: center; padding: var(--space-xl) var(--space-md); border-top: 1px solid var(--border); margin-top: var(--space-xl); }
+footer .footer-brand { font-family: var(--font-hand); font-size: 1.2rem; color: var(--gold-light); letter-spacing: 5px; margin-bottom: var(--space-xs); }
+footer .footer-oath { font-size: 0.9rem; color: var(--gold); margin: var(--space-sm) 0; letter-spacing: 3px; opacity: 0.6; }
+footer p { color: var(--text-muted); font-size: 0.75rem; font-family: var(--font-sans); }
+
+/* ===== 回到顶部 ===== */
+.back-top {
+  position: fixed; bottom: 2rem; right: 2rem;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+  color: #050302; border: none; font-size: 1.3rem;
+  cursor: pointer; opacity: 0; transition: all 0.3s; z-index: 99;
+  box-shadow: 0 4px 20px var(--gold-glow);
+}
+.back-top.visible { opacity: 1; }
+.back-top.visible:hover { transform: translateY(-3px); box-shadow: 0 6px 30px var(--gold-glow); }
+
+/* ===== 动画 ===== */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in { animation: fadeIn 0.6s ease-out; }
+
+/* ===== 响应式 ===== */
+@media (max-width: 600px) {
+  :root { --space-lg: 1.5rem; --space-xl: 2.5rem; }
+  .banner-dharma .oath { font-size: 2.2rem; letter-spacing: 8px; }
+  .page-header h1 { font-size: 1.6rem; letter-spacing: 3px; }
+  .container { padding: var(--space-md) var(--space-sm); }
+}
+
+/* ===== 标签 ===== */
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  display: inline-block; font-family: var(--font-sans); font-size: 0.72rem;
+  padding: 0.2rem 0.8rem; background: rgba(255, 200, 80, 0.06);
+  color: var(--text-secondary); border: 1px solid var(--border);
+  border-radius: 20px; transition: all 0.2s;
+}
+.tag:hover { border-color: var(--border-gold); color: var(--gold); }
+.tag-youth { background: rgba(100, 180, 100, 0.08); color: #8BC88B; border-color: rgba(100, 180, 100, 0.15); }
+
+/* ===== 功能列表 ===== */
+.func-list { list-style: none; padding: 0; }
+.func-list li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: var(--text-secondary); line-height: 1.7; font-family: var(--font-sans); }
+.func-list li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.55rem; top: 0.7rem; }
