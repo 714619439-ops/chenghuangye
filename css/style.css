@@ -4,21 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&display=swap');
 
 :root {
-  --bg-deep: #050302;
-  --bg-main: #0A0604;
-  --bg-card: rgba(255, 248, 240, 0.03);
-  --bg-card-hover: rgba(255, 248, 240, 0.06);
+  --bg-deep: #020101;
+  --bg-main: #050302;
+  --bg-card: rgba(255, 248, 240, 0.04);
+  --bg-card-hover: rgba(255, 248, 240, 0.08);
   --bg-gold-light: rgba(255, 200, 80, 0.06);
-  --text-primary: #FFF5E6;
-  --text-secondary: #E8D5B8;
-  --text-muted: #A09080;
+  --text-primary: #FFF8EE;
+  --text-secondary: #F0DFC8;
+  --text-muted: #B8A898;
   --gold: #FFC850;
   --gold-light: #FFE090;
   --gold-dark: #E0A830;
   --gold-glow: rgba(255, 200, 80, 0.35);
   --red: #CC3333;
   --red-dark: #8B1A1A;
-  --border: rgba(255, 200, 80, 0.10);
+  --border: rgba(255, 200, 80, 0.12);
   --border-gold: rgba(255, 200, 80, 0.30);
   --shadow: rgba(0, 0, 0, 0.6);
   --shadow-gold: rgba(255, 200, 80, 0.08);
