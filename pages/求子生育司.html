@@ -1,113 +1,98 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>司详情 - 城隍法脉·二十一司护法系统</title>
+  <title>鍙歌鎯?- 鍩庨殟娉曡剦路浜屽崄涓€鍙告姢娉曠郴缁?/title>
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap");
-  </style>
+  <style>@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap");</style>
 </head>
 <body>
-
-  <!-- ===== 导航 ===== -->
   <nav>
     <div class="nav-inner">
-      <a href="../index.html" class="nav-brand">城隍<span>法脉</span></a>
-      <button class="nav-toggle" aria-label="切换导航">☰</button>
+      <a href="../index.html" class="nav-brand">鍩庨殟<span>娉曡剦</span></a>
+      <button class="nav-toggle" aria-label="鍒囨崲瀵艰埅">鈽?/button>
       <ul class="nav-links">
-        <li><a href="../index.html">首页</a></li>
-        <li><a href="../all-si.html">二十一司</a></li>
-        <li><a href="../about.html">认识法脉</a></li>
-        <li><a href="../protect-youth.html">护青公益</a></li>
-        <li><a href="../rituals.html">功课仪轨</a></li>
-        <li><a href="../prayer-generator.html">祈请文</a></li>
-        <li><a href="../contact.html">关于</a></li>
+        <li><a href="../index.html">棣栭〉</a></li>
+        <li><a href="../all-si.html">浜屽崄涓€鍙?/a></li>
+        <li><a href="../about.html">璁よ瘑娉曡剦</a></li>
+        <li><a href="../protect-youth.html">鎶ら潚鍏泭</a></li>
+        <li><a href="../rituals.html">鍔熻浠建</a></li>
+        <li><a href="../prayer-generator.html">绁堣鏂?/a></li>
+        <li><a href="../contact.html">鍏充簬</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ===== 主内容 ===== -->
-  <div class="container">
-
-    <!-- 面包屑 -->
-    <div class="breadcrumb">
-      <a href="../index.html">首页</a> / <a href="../all-si.html">二十一司</a> / <span id="breadcrumb-current">司详情</span>
-    </div>
-
-    <!-- 司头部 -->
-    <div id="si-header"></div>
-
-    <!-- 司功能 -->
-    <section class="card">
-      <h2 class="section-title"><span class="icon">✦</span>本司职能</h2>
-      <ul id="si-funcs" class="func-list"></ul>
-    </section>
-
-    <!-- 适用场景 -->
-    <section class="card">
-      <h2 class="section-title"><span class="icon">☸</span>适用场景</h2>
-      <div id="si-scenarios" class="tags"></div>
-    </section>
-
-    <!-- 日常养护 -->
-    <section class="card">
-      <h2 class="section-title"><span class="icon">🌿</span>日常养护</h2>
-      <ul id="si-care" class="func-list"></ul>
-    </section>
-
-    <!-- 祈请文 -->
-    <section class="card card-gold">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-sm);flex-wrap:wrap;gap:0.5rem;">
-        <h2 class="section-title" style="border:none;margin:0;padding:0;"><span class="icon">🙏</span>祈请文</h2>
-        <button id="copy-prayer" class="copy-btn">📋 复制祈请文</button>
+  <main>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">棣栭〉</a> / <a href="../all-si.html">浜屽崄涓€鍙?/a> / <span id="breadcrumb-current">鍙歌鎯?/span>
       </div>
-      <pre id="si-prayer" class="prayer-text"></pre>
-    </section>
 
-    <!-- 司导航 -->
-    <section class="card" style="text-align:center;">
-      <h2 class="section-title" style="text-align:center;"><span class="icon">☸</span>二十一司导航</h2>
-      <div id="si-nav" class="tags" style="justify-content:center;margin-top:1rem;"></div>
-    </section>
+      <div id="si-header"></div>
 
-  </div>
+      <div class="divider">鉁?鉁?鉁?/div>
 
-  <!-- ===== 页脚 ===== -->
+      <section class="card">
+        <h2 class="section-title"><span class="icon">鉁?/span>鏈徃鑱岃兘</h2>
+        <ul id="si-funcs" class="func-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title"><span class="icon">鈽?/span>閫傜敤鍦烘櫙</h2>
+        <div id="si-scenarios" class="tags"></div>
+      </section>
+
+      <section class="card">
+        <h2 class="section-title"><span class="icon">馃尶</span>鏃ュ父鍏绘姢</h2>
+        <ul id="si-care" class="func-list"></ul>
+      </section>
+
+      <section class="card card-gold">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-sm);flex-wrap:wrap;gap:0.5rem">
+          <h2 class="section-title" style="border:none;margin:0;padding:0"><span class="icon">馃檹</span>绁堣鏂?/h2>
+          <button id="copy-prayer" class="copy-btn">馃搵 澶嶅埗绁堣鏂?/button>
+        </div>
+        <pre id="si-prayer" class="prayer-text"></pre>
+      </section>
+
+      <section class="card" style="text-align:center">
+        <h2 class="section-title" style="text-align:center"><span class="icon">鈽?/span>浜屽崄涓€鍙稿鑸?/h2>
+        <div id="si-nav" class="tags" style="justify-content:center;margin-top:1rem"></div>
+      </section>
+    </div>
+  </main>
+
   <footer>
-    <div class="footer-brand">城隍法脉 · 二十一司护法系统</div>
-    <div class="footer-oath">冥阳苦未尽，誓不成佛道；十方若有苦，寻声必救度</div>
-    <p>南无幽冥教主地藏王菩萨 &nbsp;·&nbsp; 南无护法韦驮尊天菩萨</p>
-    <p style="margin-top:0.5rem;">当境城隍尊神 &nbsp;·&nbsp; 土地正神 &nbsp;·&nbsp; 家宅六神</p>
+    <div class="footer-brand">鍩庨殟娉曡剦 路 浜屽崄涓€鍙告姢娉曠郴缁?/div>
+    <div class="footer-oath">鍐ラ槼鑻︽湭灏斤紝瑾撲笉鎴愪經閬擄紱鍗佹柟鑻ユ湁鑻︼紝瀵诲０蹇呮晳搴?/div>
+    <p>鍗楁棤骞藉啣鏁欎富鍦拌棌鐜嬭彥钀?路 鍗楁棤鎶ゆ硶闊﹂┊灏婂ぉ鑿╄惃</p>
+    <p style="margin-top:0.5rem">褰撳鍩庨殟灏婄 路 鍦熷湴姝ｇ 路 瀹跺畢鍏</p>
   </footer>
 
-  <!-- ===== 返回顶部 ===== -->
-  <button class="back-top" aria-label="返回顶部">↑</button>
+  <button class="back-top" aria-label="杩斿洖椤堕儴">鈫?/button>
 
-  <!-- ===== 脚本 ===== -->
   <script src="../js/data.js"></script>
   <script src="../js/main.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // 从文件名识别司名（如 "阴阳司.html" -> "阴阳司"）
+    document.addEventListener('DOMContentLoaded', function() {
       var filename = window.location.pathname.split('/').pop();
       var siName = filename.replace('.html', '');
-
-      // 从 SIXI_DATA 查找对应司
-      var si = SIXI_DATA.find(function(s) { return s.name === siName; });
-
+      var si = null;
+      for (var i = 0; i < SIXI_DATA.length; i++) {
+        if (SIXI_DATA[i].name === siName) { si = SIXI_DATA[i]; break; }
+      }
       if (!si) si = SIXI_DATA[0];
       renderSiPage(si);
       document.getElementById('breadcrumb-current').textContent = si.name;
 
-      // 合并两套数据生成二十一司导航
-      var allSi = SIXI_DATA;
+      // 浜屽崄涓€鍙稿鑸?
       var navEl = document.getElementById('si-nav');
       if (navEl) {
         var html = '';
-        for (var j = 0; j < allSi.length; j++) {
-          var s = allSi[j];
+        for (var j = 0; j < SIXI_DATA.length; j++) {
+          var s = SIXI_DATA[j];
           var activeClass = (s.name === si.name) ? ' tag-youth' : '';
           html += '<a href="' + s.name + '.html" class="tag' + activeClass + '">' + s.name + '</a>';
         }
@@ -115,6 +100,5 @@
       }
     });
   </script>
-
 </body>
 </html>
